@@ -190,6 +190,7 @@ extension ViewController: CLCollectionDelegate {
         collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredVertically, animated: false)
         if let cell = collectionView.cellForItem(at: indexPath) as? FBImageCell {
             collection.senderView = cell.imageView
+            addTextAt(index: indexPath.row)
         }
     }
 }
