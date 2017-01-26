@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CLCollection-Swift.h</key>
 		<data>
-		GfnKM5osIeB+E+Lz6ue4uCShnKM=
+		85i6E8zNV5el6fC3uxxDbS80wiY=
 		</data>
 		<key>Headers/CLCollection.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/CLCollection.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		NZ00HRy8K279Stg9/ZanEMAFvnc=
+		BwroqlOSb/jLW+um9faKNkF+rxk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GfnKM5osIeB+E+Lz6ue4uCShnKM=
+			85i6E8zNV5el6fC3uxxDbS80wiY=
 			</data>
 			<key>hash2</key>
 			<data>
-			SnlV9mSLszPzCsferJx3DSlWxdG+zaBE/Bpvsv9J5KI=
+			NqqqSq7YletlSB7sPafuWt9+yUhhk4vW+6l0DFIEPoM=
 			</data>
 		</dict>
 		<key>Headers/CLCollection.h</key>
@@ -68,11 +68,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NZ00HRy8K279Stg9/ZanEMAFvnc=
+			BwroqlOSb/jLW+um9faKNkF+rxk=
 			</data>
 			<key>hash2</key>
 			<data>
-			A85WP71VV878EDuj+vqPJkakGIFG57+tmdkKnxX02Jk=
+			qW+gFQB/UKRktGuXkqF+f7DOeFR8yqjO+KJDHN2XdhI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

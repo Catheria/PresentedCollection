@@ -27,6 +27,57 @@ fileprivate class FBImageCell: UICollectionViewCell {
         addSubview(imageView)
     }
 }
+@objc fileprivate protocol CloseViewDelegate: class {
+    @objc optional func closeViewDidTap(view: CloseView)
+}
+fileprivate class CloseView: UIView {
+    
+    weak var delegate: CloseViewDelegate?
+    let lineWidth: CGFloat = 2.0
+    let lineColor: UIColor = UIColor.white
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        beginCloseView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func beginCloseView() {
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(CloseView.didTap(gesture:)))
+        addGestureRecognizer(singleTap)
+    }
+    
+    func didTap(gesture: UITapGestureRecognizer) {
+        delegate?.closeViewDidTap?(view: self)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        func p(x: CGFloat, y: CGFloat) -> CGPoint { return CGPoint(x: x * rect.width, y: y * rect.height) }
+        func px(x: CGFloat) -> CGFloat { return x * rect.width }
+        func py(y: CGFloat) -> CGFloat { return y * rect.height }
+        
+        let ctx = UIGraphicsGetCurrentContext()!
+        UIColor.clear.setFill()
+        lineColor.setStroke()
+        
+        let q: CGFloat = 0.25
+        let bp = UIBezierPath()
+        bp.lineWidth = lineWidth
+        bp.lineCapStyle = CGLineCap.round
+        bp.move(to: p(x: q, y: q))
+        bp.addLine(to: p(x: (1 - q), y: (1 - q)))
+        bp.stroke()
+        
+        ctx.translateBy(x: rect.width/2, y: rect.height/2)
+        ctx.rotate(by: CGFloat(M_PI)/2)
+        ctx.translateBy(x: -rect.width/2, y: -rect.height/2)
+        bp.stroke()
+    }
+}
+
 
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -63,12 +114,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var titleLabel: UILabel!
     var descriptionLabel: UILabel!
     
+    let arrTest = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday", "April", "August", "December", "January", "July", "June", "November"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "CLCollection"
         view.backgroundColor = UIColor.white
         view.addSubview(collectionView)
+    }
+    
+    func addTextAt(index: Int) {
+        titleLabel.text = arrTest[index]
+        descriptionLabel.text = "Description: " + arrTest[index]
     }
     
     // MARK: - CollectionView DataSource & Delegate
@@ -85,16 +143,30 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? FBImageCell {
-             collection = CLCollection()
-             collection.senderView = cell.imageView
-             collection.dataSource = self
-             collection.delegate = self
-             collection.initialIndex = indexPath.row
-             
-             let blackView = UIView()
-             blackView.backgroundColor = UIColor.black
-             collection.dimmingView = blackView
-             collection.present()
+            
+            let screen = UIScreen.main.bounds
+            let closeView = CloseView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+            closeView.isOpaque = false
+            closeView.delegate = self
+            titleLabel = UILabel(frame: CGRect(x: 10, y: screen.height - 60, width: screen.width - 10 * 2, height: 20))
+            titleLabel.textColor = UIColor.white
+            titleLabel.font = UIFont.systemFont(ofSize: 16)
+            descriptionLabel = UILabel(frame: CGRect(x: 10, y: screen.height - 34, width: screen.width - 10 * 2, height: 20))
+            descriptionLabel.textColor = UIColor.white
+            descriptionLabel.font = UIFont.systemFont(ofSize: 14)
+            
+            collection = CLCollection()
+            collection.senderView = cell.imageView
+            collection.dataSource = self
+            collection.delegate = self
+            collection.initialIndex = indexPath.row
+            collection.decoratorView = [closeView, titleLabel, descriptionLabel]
+            addTextAt(index: indexPath.row)
+            
+            let blackView = UIView()
+            blackView.backgroundColor = UIColor.black
+            collection.dimmingView = blackView
+            collection.present()
         }
     }
 }
@@ -121,3 +193,10 @@ extension ViewController: CLCollectionDelegate {
         }
     }
 }
+
+extension ViewController: CloseViewDelegate {
+    fileprivate func closeViewDidTap(view: CloseView) {
+        collection.dismiss()
+    }
+}
+

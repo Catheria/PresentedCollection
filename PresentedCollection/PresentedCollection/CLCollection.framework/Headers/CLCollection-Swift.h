@@ -142,6 +142,7 @@ SWIFT_CLASS("_TtC12CLCollection12CLCollection")
 @property (nonatomic, weak) id <CLCollectionDataSource> _Nullable dataSource;
 @property (nonatomic, weak) id <CLCollectionDelegate> _Nullable delegate;
 - (void)presentFrom:(UIViewController * _Nullable)from;
+- (void)dismissWithCompletion:(void (^ _Nullable)(void))completion;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

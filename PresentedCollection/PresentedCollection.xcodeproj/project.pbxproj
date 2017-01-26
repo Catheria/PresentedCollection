@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A14FB9A1E39EEDF008C965B /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */; };
+		6A14FB9B1E39EEDF008C965B /* CLCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A2BAF9F1E39ED5F00B647AE /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */; };
 		6A442BF11E39C36B00EF0276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A442BF01E39C36B00EF0276 /* AppDelegate.swift */; };
 		6A442BF31E39C36B00EF0276 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A442BF21E39C36B00EF0276 /* ViewController.swift */; };
 		6A442BF61E39C36B00EF0276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A442BF41E39C36B00EF0276 /* Main.storyboard */; };
 		6A442BF81E39C36B00EF0276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A442BF71E39C36B00EF0276 /* Assets.xcassets */; };
 		6A442BFB1E39C36B00EF0276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A442BF91E39C36B00EF0276 /* LaunchScreen.storyboard */; };
 		6A442C031E39C3CE00EF0276 /* CLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A442C021E39C3CE00EF0276 /* CLImage.swift */; };
-		6A442C051E39C41000EF0276 /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A442C041E39C41000EF0276 /* CLCollection.framework */; };
-		6A442C061E39C41A00EF0276 /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A442C041E39C41000EF0276 /* CLCollection.framework */; };
-		6A442C071E39C41A00EF0276 /* CLCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A442C041E39C41000EF0276 /* CLCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A442C171E39C46A00EF0276 /* placeholder0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A442C091E39C46A00EF0276 /* placeholder0.jpg */; };
 		6A442C181E39C46A00EF0276 /* placeholder1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A442C0A1E39C46A00EF0276 /* placeholder1.jpg */; };
 		6A442C191E39C46A00EF0276 /* placeholder2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A442C0B1E39C46A00EF0276 /* placeholder2.jpg */; };
@@ -39,7 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6A442C071E39C41A00EF0276 /* CLCollection.framework in Embed Frameworks */,
+				6A14FB9B1E39EEDF008C965B /* CLCollection.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLCollection.framework; sourceTree = "<group>"; };
 		6A442BED1E39C36B00EF0276 /* PresentedCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresentedCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A442BF01E39C36B00EF0276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A442BF21E39C36B00EF0276 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		6A442BFA1E39C36B00EF0276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A442BFC1E39C36B00EF0276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A442C021E39C3CE00EF0276 /* CLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLImage.swift; sourceTree = "<group>"; };
-		6A442C041E39C41000EF0276 /* CLCollection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLCollection.framework; sourceTree = "<group>"; };
 		6A442C091E39C46A00EF0276 /* placeholder0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder0.jpg; sourceTree = "<group>"; };
 		6A442C0A1E39C46A00EF0276 /* placeholder1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder1.jpg; sourceTree = "<group>"; };
 		6A442C0B1E39C46A00EF0276 /* placeholder2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder2.jpg; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A442C051E39C41000EF0276 /* CLCollection.framework in Frameworks */,
-				6A442C061E39C41A00EF0276 /* CLCollection.framework in Frameworks */,
+				6A14FB9A1E39EEDF008C965B /* CLCollection.framework in Frameworks */,
+				6A2BAF9F1E39ED5F00B647AE /* CLCollection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 				6A442BF71E39C36B00EF0276 /* Assets.xcassets */,
 				6A442BF91E39C36B00EF0276 /* LaunchScreen.storyboard */,
 				6A442BFC1E39C36B00EF0276 /* Info.plist */,
-				6A442C041E39C41000EF0276 /* CLCollection.framework */,
+				6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */,
 			);
 			path = PresentedCollection;
 			sourceTree = "<group>";
@@ -398,6 +398,7 @@
 				6A442C011E39C36B00EF0276 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
