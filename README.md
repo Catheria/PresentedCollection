@@ -8,7 +8,18 @@ If it loads items from URL successfully, it will cache items on disks for reuse 
 - Swift 3.0+
 
 # Usage
-Set CLCollection to property of an instance of UIViewController subclass by code.
+Set CLCollection to a property of an instance of UIViewController subclass by code.
 ````
 var collection: CLCollection!
+````
+
+Set the dataSource to CLCollection  
+````
+collection.dataSource 
+````
+
+then call present CLCollection's method
+
+````
+collection.present()
 ````
