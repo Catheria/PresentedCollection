@@ -18,8 +18,11 @@ Set the dataSource to CLCollection
 collection.dataSource 
 ````
 
-then call present CLCollection's method
+then call CLCollection's present method
 
 ````
 collection.present()
 ````
+
+# PresentedCollection
+`PresentedCollection` project comes with a demo app that has a lot of set required to present the CLCollection. 
