@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A14FB9A1E39EEDF008C965B /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */; };
-		6A14FB9B1E39EEDF008C965B /* CLCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6A2BAF9F1E39ED5F00B647AE /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */; };
+		6A2693F01E3B146900508BC0 /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A730FF81E3B145800A40E1F /* CLCollection.framework */; };
+		6A2693F11E3B146900508BC0 /* CLCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A730FF81E3B145800A40E1F /* CLCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A442BF11E39C36B00EF0276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A442BF01E39C36B00EF0276 /* AppDelegate.swift */; };
 		6A442BF31E39C36B00EF0276 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A442BF21E39C36B00EF0276 /* ViewController.swift */; };
 		6A442BF61E39C36B00EF0276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A442BF41E39C36B00EF0276 /* Main.storyboard */; };
@@ -30,6 +29,7 @@
 		6A442C221E39C46A00EF0276 /* placeholder11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A442C141E39C46A00EF0276 /* placeholder11.jpg */; };
 		6A442C231E39C46A00EF0276 /* placeholder12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A442C151E39C46A00EF0276 /* placeholder12.jpg */; };
 		6A442C241E39C46A00EF0276 /* placeholder13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A442C161E39C46A00EF0276 /* placeholder13.jpg */; };
+		6A730FF91E3B145800A40E1F /* CLCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A730FF81E3B145800A40E1F /* CLCollection.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,7 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6A14FB9B1E39EEDF008C965B /* CLCollection.framework in Embed Frameworks */,
+				6A2693F11E3B146900508BC0 /* CLCollection.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +47,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLCollection.framework; sourceTree = "<group>"; };
 		6A442BED1E39C36B00EF0276 /* PresentedCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresentedCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A442BF01E39C36B00EF0276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A442BF21E39C36B00EF0276 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		6A442C141E39C46A00EF0276 /* placeholder11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder11.jpg; sourceTree = "<group>"; };
 		6A442C151E39C46A00EF0276 /* placeholder12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder12.jpg; sourceTree = "<group>"; };
 		6A442C161E39C46A00EF0276 /* placeholder13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder13.jpg; sourceTree = "<group>"; };
+		6A730FF81E3B145800A40E1F /* CLCollection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLCollection.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A14FB9A1E39EEDF008C965B /* CLCollection.framework in Frameworks */,
-				6A2BAF9F1E39ED5F00B647AE /* CLCollection.framework in Frameworks */,
+				6A730FF91E3B145800A40E1F /* CLCollection.framework in Frameworks */,
+				6A2693F01E3B146900508BC0 /* CLCollection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 				6A442BF71E39C36B00EF0276 /* Assets.xcassets */,
 				6A442BF91E39C36B00EF0276 /* LaunchScreen.storyboard */,
 				6A442BFC1E39C36B00EF0276 /* Info.plist */,
-				6A2BAF9E1E39ED5F00B647AE /* CLCollection.framework */,
+				6A730FF81E3B145800A40E1F /* CLCollection.framework */,
 			);
 			path = PresentedCollection;
 			sourceTree = "<group>";
